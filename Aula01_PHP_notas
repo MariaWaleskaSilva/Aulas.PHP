@@ -1,0 +1,20 @@
+<?php
+$nota1 = 2;
+$nota2 = 1;
+$nota3 = 0;
+$media = ($nota1+ $nota2 + $nota3)/3;
+
+If($media>=7){
+   echo"APROVADO";
+}
+
+elseif(($media<7) && (media>=4)){
+
+    echo "PROVA FINAL";
+}
+
+else {
+    echo"REPROVADO";
+}
+
+?>
