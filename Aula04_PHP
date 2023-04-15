@@ -1,0 +1,65 @@
+
+#inquisição de uma tela para outra ( tela de login)
+
+<form Id="Form.login"  action="login.PHP" method= "POST">
+        login: <imput Type = "TEXT" name= "login"><br>
+        senha: <imput Type ="password" name="senha"><br>
+        <imput Type="Submi.t" name="entrar" valve ="entrar">
+</form>
+
+#exemplo 1_echo
+
+<?php
+
+$login = $_POST['login'];
+$senha = $_POST['senha'];
+
+echo $login."<br>";
+echo $senha;
+
+?>
+
+exemplo 2 if/else
+
+<?php
+
+$login = $_POST['login'];
+$senha = $_POST['senha'];
+
+if ($login == "MW" && $senha == "noris") {
+    echo "logado !!";
+} else{
+    echo "login ou senha incorretos";
+}
+?>
+
+
+#exemplo header (se a senha e o login estiver errado)
+
+<?php
+
+$login = $_POST['login'];
+$senha = $_POST['senha'];
+
+if ($login == "MW" && $senha == "noris") {
+    echo "logado !!";
+} else{
+    header('Location: index.php');
+}
+?>
+
+#conclusão( Se por a senha e login errado vai para primeira tela e se por a senha e o login certo entra)
+
+<?php
+
+$login = $_POST['login'];
+$senha = $_POST['senha'];
+
+if ($login == "MW" && $senha == "noris") {
+    header('Location: principal.php');
+} else{
+    header('Location: INDEX.PHP');
+}
+?>
+
+#OBS: não esquece de cria a pagina (principal.PHP).
