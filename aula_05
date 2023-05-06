@@ -1,0 +1,70 @@
+#escreva um codigo que receba 2 valores inteiro, faça sua soma e 
+multiplique o resultado pela metade do segundo.
+<?php
+$valor1 = 5;
+$valor2 = 10;
+
+$resultado = ($valor1 + $valor2) * ($valor2/2);
+    echo $resultado;
+
+?>
+
+#escreva um codigo que receba 1 valoe inteiro e exiba 15% desse valor.
+<?php
+$valor = 100;
+$porcentagem = $valor  * 0.15;
+    echo $porcentagem;
+
+ ?>
+ 
+ #O cliente de uma loja realizou a compra de um produto e decide fazer o pagamento em 
+12 parcelas iguais para este parcelamento é cobrado o juros
+de 1% ao mês. Escreva um codigo que calcule e exiba o valor total da compra e o valor das parcelas.
+
+<?php
+
+$valor = 1800;
+$Parcelas = 1800/12;
+$Juros = $valor*0.12;
+$total = $valor + $Juros;
+ echo $total."<br>";
+ echo $Parcelas;
+
+?>
+
+#Escreva um codigo que receba um valor inteiro, converta-o em anos, exiba 
+a idade e informe se ele é maior ou menor de idade.
+<?php
+$valor = 1000;
+$idade = $valor/365;
+    echo number_format($idade);
+
+if($idade >=18){
+    echo"Maior de idade";
+} else{
+    echo "Maior de idade";
+}
+
+?>
+
+#escreva um codigo que receba 1 valor inteiro, o primeiro valor vai
+determina a quantidade de linhas e colunas e que repita a palavra FPB nas linhas e colunas.
+
+<?php
+function printFPB(){
+    echo "FPB";
+}
+$valor = intval($_POST['valor']);
+if($valor > 0 ){
+    for ($i; $j <=$valor; $i++){
+        for($j = 1; $j <= $valor; $j++){
+            printFPB();
+        
+        }
+        echo"<br>";
+    }
+}else{
+    echo"valor inválido. Insira o numero positivi";
+}
+
+?>
